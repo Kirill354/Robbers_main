@@ -1,13 +1,11 @@
 #pragma once
 #include <iostream>
-#include "struct.hpp"
+#include "robber.hpp"
 #include "menu.hpp"
 #include "main.hpp"
 
 using namespace std;
 
-int CurrentRobbers = 0;
-int CurrentLiveRobbers = 0;
 
 Robber arr[40];
 

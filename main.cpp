@@ -6,9 +6,7 @@
 
 int main() {
     
-    
     beginning();
-
 
     return 0;
 }

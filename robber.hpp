@@ -3,6 +3,9 @@
 
 using namespace std;
 
+int CurrentRobbers = 0;
+int CurrentLiveRobbers = 0;
+
 struct Robber{
 
 

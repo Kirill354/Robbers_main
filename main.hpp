@@ -1,8 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "struct.hpp"
-#include "begin.hpp"
+#include "robber.hpp"
 
 using namespace std;
 
@@ -165,8 +164,10 @@ void RobbersProperty(Robber *arr){
 void KillRobber(Robber *arr){
 
     string victim;
+
     cout << "Enter a name future victim: ";
-    cin >> victim;
+    cin  >> victim;
+    cout << "\n";
 
     int i = 0;
 
