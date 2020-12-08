@@ -1,27 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "struct.hpp"
+#include "begin.hpp"
 
 using namespace std;
-
-int CurrentRobbers = 0;
-int CurrentLiveRobbers = 0;
-
-struct Robber{
-
-    string name;
-    bool life;
-
-    int skakun;
-    int sabli;
-    int rubin;
-    int ozher;
-    int wifes;
-    
-    int money;
-
-};
-
 
 void PushRobber(Robber *arr){
 
@@ -193,7 +176,17 @@ void KillRobber(Robber *arr){
 
     }
     
-    arr[i].life = 0;
+    if (arr[i].life) {
+        
+        arr[i].life = 0;
+        
+    }
+    else{
+
+        cout << "This robber has been died " << endl << endl;
+
+    }
+
 }
 
 void RobberInfo(Robber *arr){
@@ -223,17 +216,4 @@ void RobberInfo(Robber *arr){
         }
 
     }
-}
-
-void menu(){
-
-    cout << " What do your prefer? " << endl << endl;
-    cout << " 0 - to left menu " << endl;
-    cout << " 1 - to display a list of robbers " << endl;
-    cout << " 2 - to put new rubber " << endl;
-    cout << " 3 - to display a list of robber's wealth " << endl;
-    cout << " 4 - to display a list of robber's property " << endl;
-    cout << " 5 - to kill a robber " << endl;
-    cout << " 6 - to get info about robber " << endl << endl;
-
 }
