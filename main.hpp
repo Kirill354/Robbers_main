@@ -9,8 +9,24 @@ void PushRobber(Robber *arr){
 
     int i = CurrentRobbers;
 
-    cout << " Enter Robber " << endl;
-    cin >> arr[i].name >> arr[i].life >> arr[i].skakun >> arr[i].sabli >> arr[i].rubin >> arr[i].ozher >> arr[i].wifes >> arr[i].money;
+    cout << " Enter Robber: " ;
+    cout << "\nname: ";
+    cin >> arr[i].name;
+    cout << "\nlife or death? put 1 for life, 2 for death: ";
+    cin >> arr[i].life;
+    cout << "\nquantity of skakun: ";
+    cin >> arr[i].skakun;
+    cout << "\nquantity of sabli: ";
+    cin >> arr[i].sabli;
+    cout << "\nquantity of rubin: ";
+    cin >> arr[i].rubin;
+    cout << "\nquantity of ozher: ";
+    cin >> arr[i].ozher;
+    cout << "\nquantity of wifes: ";
+    cin >> arr[i].wifes;
+    cout << "\nquantity of money: ";
+    cin >> arr[i].money;
+
     cout << '\n';
 
     CurrentRobbers++;
@@ -169,24 +185,47 @@ void KillRobber(Robber *arr){
     cin  >> victim;
     cout << "\n";
 
-    int i = 0;
+    int k = 0;
 
-    while (arr[i].name != victim){
+    for (int i = 0; i < CurrentRobbers; i++){
+        
+        if (arr[i].name == victim){
 
-        i++;
+            k++;
 
+        }
     }
+
+    if (k != 0){
     
-    if (arr[i].life) {
-        
-        arr[i].life = 0;
-        
-    }
-    else{
 
-        cout << "This robber has been died " << endl << endl;
+        for (int i = 0; i < CurrentRobbers; i++){
+
+            if (arr[i].name == victim) {
+            
+                if (arr[i].life) {
+        
+                    arr[i].life = 0;
+                    CurrentLiveRobbers--;
+
+                }
+                else{
+
+                    cout << "This robber has been died " << endl << endl;
+
+                }
+                break;
+            }
+        
+        }
 
     }
+    else {
+
+        cout << "incorrect name " << endl << endl;
+
+    }
+
 
 }
 

@@ -14,7 +14,23 @@ void beginning(){
     for (int i = 0; i<1; i++){ //пока только 1 разбойник имеется
 
         cout << " Enter Robber " << i+1 << ":" << endl;
-        cin >> arr[i].name >> arr[i].life >> arr[i].skakun >> arr[i].sabli >> arr[i].rubin >> arr[i].ozher >> arr[i].wifes >> arr[i].money;
+        
+        cout << "\nname: ";
+        cin >> arr[i].name;
+        cout << "\nlife or death? put 1 for life, 2 for death: ";
+        cin >> arr[i].life;
+        cout << "\nquantity of skakun: ";
+        cin >> arr[i].skakun;
+        cout << "\nquantity of sabli: ";
+        cin >> arr[i].sabli;
+        cout << "\nquantity of rubin: ";
+        cin >> arr[i].rubin;
+        cout << "\nquantity of ozher: ";
+        cin >> arr[i].ozher;
+        cout << "\nquantity of wifes: ";
+        cin >> arr[i].wifes;
+        cout << "\nquantity of money: ";
+        cin >> arr[i].money;
 
         CurrentRobbers++;
 
